@@ -1,0 +1,16 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(òÆëÍøÿÿÿÿ8İÇõÚ†/
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ßŒZ8‚ª˜Û†/
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(Š·“˜8Ôûİ†/
+0
+java:S1220""Move this file to a named package.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(øìŠÂ8ë»”Û†/
+d
+java:S1192"GDefine a constant instead of duplicating this literal "Punto " 3 times.(øìŠÂ8·‘•İ†/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(¿ãÕ¤8ÿã•Û†/
+Z	java:S106*"9Replace this use of System.out or System.err by a logger.(öíŞòûÿÿÿÿ8—Á½Û†/
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(øµîùÿÿÿÿ8€¬¿Û†/
+U	java:S106,"9Replace this use of System.out or System.err by a logger.(úÍ•ı8İÿÏÜ†/
+K
+java:S1125%")Remove the literal "false" boolean value.(·¨š£úÿÿÿÿ8Ìó‡Û†/
+U	java:S106."9Replace this use of System.out or System.err by a logger.(Ñ‚ÁÖ8·‘•İ†/
