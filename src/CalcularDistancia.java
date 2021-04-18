@@ -1,6 +1,6 @@
 public class CalcularDistancia {
     //Atributos
-    private double menorDistancia;
+    private Double menorDistancia;
     private int punto1;
     private int punto2;
 
@@ -11,46 +11,41 @@ public class CalcularDistancia {
 
     //Metodos
     public void implementarElementos(){
-        setMenorDistancia(0);
         setPunto1(0);
         setPunto2(0);
     }
 
     public void calcularMenorDistancia(Puntos parametros){
         int puntos = parametros.getCoordenadaX().size();
-        for (int contador1 = 0; contador1 < puntos; contador1++){
-            for(int contador2 = 0; contador2 < puntos; contador2++){
-                double resultado;
-                if(!(contador1 == contador2)){
-                    double x1 = (double) parametros.getCoordenadaX().get(contador1);
-                    double x2 = (double) parametros.getCoordenadaX().get(contador2);
-                    double y1 = (double) parametros.getCoordenadaY().get(contador1);
-                    double y2 = (double) parametros.getCoordenadaY().get(contador2);
-
-                    resultado = Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2 - y1), 2));
-
-                    if (contador1 == 0 && getMenorDistancia() == 0) {
-                        setMenorDistancia(resultado);
-                        setPunto1(contador1);
-                        setPunto2(contador2);
-                    }
-
-                    if (resultado < getMenorDistancia()){
-                        setMenorDistancia(resultado);
-                        setPunto1(contador1);
-                        setPunto2(contador2);
-                    }
+        for (int contador1 = 0; contador1 < puntos-1; contador1++){
+            for(int contador2 = contador1+1; contador2 < puntos; contador2++){
+                double x1 = (double) parametros.getCoordenadaX().get(contador1);
+                double x2 = (double) parametros.getCoordenadaX().get(contador2);
+                double y1 = (double) parametros.getCoordenadaY().get(contador1);
+                double y2 = (double) parametros.getCoordenadaY().get(contador2);
+                double resultado = Math.sqrt(Math.pow((x2-x1), 2) + Math.pow((y2 - y1), 2));
+                if (getMenorDistancia() == null) {
+                    cargarResultado(resultado, contador1, contador2);
+                }
+                if (resultado < getMenorDistancia()){
+                    cargarResultado(resultado, contador1, contador2);
                 }
             }
         }
     }
 
+    public void cargarResultado(double resultado, int contador1, int contador2){
+        setMenorDistancia(resultado);
+        setPunto1(contador1);
+        setPunto2(contador2);
+    }
+
     //Setters && Getters
-    public double getMenorDistancia() {
+    public Double getMenorDistancia() {
         return menorDistancia;
     }
 
-    public void setMenorDistancia(double menorDistancia) {
+    public void setMenorDistancia(Double menorDistancia) {
         this.menorDistancia = menorDistancia;
     }
 

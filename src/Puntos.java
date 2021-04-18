@@ -13,8 +13,8 @@ public class Puntos {
 
     //Metodos
     public void implementarElementos(){
-        setCoordenadaX(new ArrayList<Double>());
-        setCoordenadaY(new ArrayList<Double>());
+        setCoordenadaX(new ArrayList<>());
+        setCoordenadaY(new ArrayList<>());
     }
 
     //Setters && Getters
